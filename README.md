@@ -1,6 +1,12 @@
 # mobx-react-functional-demo
 
 Basic TODO app with MobX & functional React components.
+Take a look at:
+
+- store.ts
+- App.tsx
+- AddTask.tsx
+- TaskList.tsx
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
