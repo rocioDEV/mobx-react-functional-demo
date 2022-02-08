@@ -1,41 +1,9 @@
-import styled from "@emotion/styled";
-import { Checkbox, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Observer } from "mobx-react";
 
-import { Task } from "../store/models";
-import { useTaskStoreContext } from "../store/TaskContext";
-
-const StyledItem = styled.li`
-  list-style-type: none;
-`;
-
-interface Props {
-  done: boolean;
-  toggleItem: () => void;
-  content: string;
-}
-
-export const TaskListItem: React.FC<Props> = ({
-  done,
-  toggleItem,
-  content,
-}) => {
-  return (
-    <StyledItem>
-      <Checkbox checked={done} onChange={toggleItem} />
-      <Typography
-        variant="body1"
-        gutterBottom
-        sx={{
-          display: "inline",
-          textDecoration: done ? "line-through" : "none",
-        }}
-      >
-        {content}
-      </Typography>
-    </StyledItem>
-  );
-};
+import { Task } from "../../store/models";
+import { useTaskStoreContext } from "../../store/TaskContext";
+import { TaskListItem } from "./TaskListItem";
 
 export const TaskList = () => {
   const tasksStore = useTaskStoreContext();

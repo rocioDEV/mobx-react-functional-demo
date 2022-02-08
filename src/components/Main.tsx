@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-import { TaskList } from "./TaskList";
+import { TaskList } from "./Tasklist/TaskList";
 import { AddTask } from "./AddTask";
 import { SideBar } from "./Sidebar/SideBar";
 
